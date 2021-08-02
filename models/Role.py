@@ -9,5 +9,5 @@ class Role(db.Model):
     status = db.Column(db.Boolean(), nullable=False, default=True)
     creation_date = db.Column(db.DateTime(), nullable=False, default=datetime.now)
     update_date = db.Column(db.DateTime(), nullable=False, default=datetime.now)
-    delete_date = db.Column(db.DateTime())
+    delete_date = db.Column(db.DateTime(), nullable=True, default=None)
 

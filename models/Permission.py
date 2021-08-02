@@ -3,7 +3,8 @@ from datetime import datetime
 
 role_permissions = db.Table('role_permissions',
                             db.Column('role_id', db.Integer, db.ForeignKey('role.id'), primary_key=True),
-                            db.Column('permission_id', db.Integer, db.ForeignKey('permission.id'), primary_key=True))
+                            db.Column('permission_id', db.Integer, db.ForeignKey('permission.id'), primary_key=True),
+                            db.Column('status', db.Boolean, default=True))
 
 
 class Permission(db.Model):
